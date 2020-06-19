@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Diabetes Predictor</title>
+		<head>
+        <meta charset="utf-8">
+        <title>Diabetes Predictor</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+      <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+       
+    </head>
+
+		<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+	</head>
+
+    <body>
+
+        <!-- Website Title -->
+		<div class="container">
+            <h2 class='container-heading'><span class="heading_font">Diabetes Predictor</span></h2>
+      <div class='description'> <br></br>
+    			<p>A Machine Learning Web App, Built with Flask, Deployed using Heroku.</p>
+    		</div>
+    	</div>
+
+		<!-- Result -->
+		<div class="results">
+			{% if prediction==1 %}
+				<h1><span class='danger'>Oops! You have DIABETES.</span></h1><h3><span class='sad'>Please consult Doctor.Stay Healthy Mate!</h3>
+<img src="https://images.unsplash.com/photo-1493836512294-502baa1986e2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1067&q=80" alt="you have diabetes" width="500" height="333">
+      {% elif prediction==0 %}
+      <h1> <span class='safe'>Wooh! You DON'T have diabetes.</span></h1><h2 > <span class='happy'> Long Live!</h2>
+<img src="https://anandaindia.org/wp-content/uploads/2018/12/happy-man.jpg" alt="you dont have diabetes" width="500"
+         height="333">
+			{% endif %}
+<br></br> <p> Designed and Developed by Suhas Sasetty </p>
+		</div>
+
+		<!-- Footer -->
+
+        <!-- Footer -->
+       <div class='footer'>
+           <div class="contact">
+               
+               <a target="_blank" href="https://www.linkedin.com/in/suhas-sasetty/"><i class="fab fa-linkedin fa-lg contact-icon"></i></a>
+           </div>
+           <p class='footer-description'>Suhas Sasetty<br>Mail : aiml.suhas@gmail.com</p>
+       </div>
+
+    </body>
+</html>
